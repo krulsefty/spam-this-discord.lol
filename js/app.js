@@ -21,7 +21,7 @@ async function sendWebhook() {
         return h3Element.innerHTML = "status: <span class='error'>error</span>";
     }
 
-    if (link.includes("https://") || link.includes("http://")) {
+    if (link.includes("https://discord.com/api/webhooks/") || link.includes("https://canary.discord.com/api/webhooks/")) {
     } else {
         return h3Element.innerHTML = "status: <span class='error'>error</span>";
     }
