@@ -1,0 +1,82 @@
+body {
+    background-color: #bebebe;
+    font-family: "GT Pressura Mono", monospace;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    opacity: 0;
+    margin-top: 180px;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 92%;
+    margin-left: 10px;
+}
+
+h3 {
+    margin-left: -20px;
+    text-align: center;
+}
+
+h3 .done {
+    color: #2BC03E;
+}
+
+#link,
+#username,
+#avatar,
+#msg {
+    margin-left: 42px;
+}
+
+::selection {
+    background-color: #000;
+    color: #bebeff;
+}
+
+input {
+    border-radius: 8px;
+}
+
+button {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.note {
+    position: fixed;
+    top: 890px;
+    right: 1515px;
+    padding: 6px;
+    color: #000;
+    opacity: 0.2;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    white-space: nowrap;
+}
