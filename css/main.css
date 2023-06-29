@@ -48,7 +48,7 @@ h3 .done {
 #username,
 #avatar,
 #msg {
-    margin-left: 39px;
+    margin-left: 245px;
 }
 
 ::selection {
@@ -64,8 +64,8 @@ button {
     padding-left: 30px;
     padding-right: 30px;
     border-radius: 8px;
-    margin-top: 10px;
-    margin-left: 80px;
+    margin-top: 15px;
+    margin-left: 284px;
 }
 
 .note {
