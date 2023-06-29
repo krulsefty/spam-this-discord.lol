@@ -52,7 +52,7 @@ h3 .error {
 #username,
 #avatar,
 #msg {
-    margin-left: 245px;
+    margin-left: 243.3px;
 }
 
 ::selection {
@@ -69,7 +69,8 @@ button {
     padding-right: 30px;
     border-radius: 8px;
     margin-top: 15px;
-    margin-left: 284px;
+    margin-left: 283.1px;
+    font-weight: bolder;
 }
 
 .note {
