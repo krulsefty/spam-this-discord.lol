@@ -15,8 +15,18 @@ async function sendWebhook() {
         content: msg
     };
 
-    var h3Element = document.querySelector("h3"); // Get the <h3> element
-    h3Element.innerHTML = "status: <span class='done'>done</span>"; // Update the content with a span for "done"
+    var h3Element = document.querySelector("h3");
+
+    if (!link || !username || !msg) {
+        return h3Element.innerHTML = "status: <span class='error'>error</span>";
+    }
+
+    if (link.includes("https://") || link.includes("http://")) {
+    } else {
+        return h3Element.innerHTML = "status: <span class='error'>error</span>";
+    }
+
+    h3Element.innerHTML = "status: <span class='done'>done</span>";
 
     request.send(JSON.stringify(params));
 }
@@ -29,28 +39,28 @@ function sendWebhookLoop() {
 
 document.getElementById("btn").addEventListener("click", sendWebhookLoop);
 
-// document.addEventListener("contextmenu", function (e) {
-//     e.preventDefault()
-// })
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault()
+})
 
-// document.onkeydown = function (e) {
-//     if (event.keyCode == 123) {
-//         return false
-//     }
+document.onkeydown = function (e) {
+    if (event.keyCode == 123) {
+        return false
+    }
 
-//     if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-//         return false
-//     }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+        return false
+    }
 
-//     if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
-//         return false
-//     }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+        return false
+    }
 
-//     if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-//         return false
-//     }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+        return false
+    }
 
-//     if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-//         return false
-//     }
-// }
+    if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+        return false
+    }
+}

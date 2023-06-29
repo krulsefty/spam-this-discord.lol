@@ -44,6 +44,10 @@ h3 .done {
     color: #2BC03E;
 }
 
+h3 .error {
+    color: #CA2C2C;
+}
+
 #link,
 #username,
 #avatar,
