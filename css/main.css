@@ -56,8 +56,8 @@ h3 .error {
 }
 
 ::selection {
-    background-color: #000;
-    color: #bebeff;
+    background-color: #fff;
+    color: #000;
 }
 
 input {
