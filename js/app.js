@@ -1,43 +1,56 @@
 async function sendWebhook() {
     var link = document.getElementById("linkInput").value;
-    var username = document.getElementById("usernameInput").value;
+    let username 
     var avatar = document.getElementById("avatarInput").value;
     var msg = document.getElementById("msgInput").value;
 
+    if (!document.getElementById("usernameInput").value) {
+        username = "Webhook"
+    } else {
+        username = document.getElementById("usernameInput").value
+    }
+  
     var request = new XMLHttpRequest();
     request.open("POST", link);
-
+  
     request.setRequestHeader('Content-type', 'application/json');
-
+  
     var params = {
-        username: username,
-        avatar_url: avatar,
-        content: msg
+      username: username,
+      avatar_url: avatar,
+      content: msg
     };
-
+  
     var h3Element = document.querySelector("h3");
-
-    if (!link || !username || !msg) {
-        return h3Element.innerHTML = "status: <span class='error'>error</span>";
+  
+    if (!link || !msg) {
+      return h3Element.innerHTML = "status: <span class='error'>error</span>";
     }
-
-    if (link.includes("https://discord.com/api/webhooks/") || link.includes("https://canary.discord.com/api/webhooks/")) {
+  
+    if (
+      link.includes("https://discord.com/api/webhooks/") ||
+      link.includes("https://canary.discord.com/api/webhooks/")
+    ) {
     } else {
-        return h3Element.innerHTML = "status: <span class='error'>error</span>";
+      return h3Element.innerHTML = "status: <span class='error'>error</span>";
     }
-
+  
     h3Element.innerHTML = "status: <span class='done'>done</span>";
-
+  
     request.send(JSON.stringify(params));
-}
-
-function sendWebhookLoop() {
-    for (let i = 0; i < 5; i++) {
-        sendWebhook();
+  }
+  
+  function sendWebhookLoop() {
+    var numMessages = 35;
+    var delayRange = 750;
+  
+    for (let i = 0; i < numMessages; i++) {
+      setTimeout(sendWebhook, i * delayRange + Math.random() * delayRange * 2);
     }
-}
-
-document.getElementById("btn").addEventListener("click", sendWebhookLoop);
+  }
+  
+  document.getElementById("btn").addEventListener("click", sendWebhookLoop);
+  
 
 document.addEventListener("contextmenu", function (e) {
     e.preventDefault()
