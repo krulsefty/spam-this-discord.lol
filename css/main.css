@@ -1,10 +1,11 @@
 body {
-    background-color: #bebebe;
+    background-color: #000;
     font-family: "GT Pressura Mono", monospace;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 120px;
 }
 
 main {
@@ -25,9 +26,10 @@ main {
 }
 
 h1 {
+    color: #fff;
     text-align: center;
     text-decoration: underline;
-    text-decoration-color: rgba(0, 0, 0, 0.5);
+    text-decoration-color: rgba(255, 255, 255, 0.5);
 }
 
 h2 {
@@ -36,6 +38,7 @@ h2 {
 }
 
 h3 {
+    color: #fff;
     margin-left: -20px;
     text-align: center;
 }
@@ -48,20 +51,28 @@ h3 .error {
     color: #CA2C2C;
 }
 
-#link,
-#username,
-#avatar,
-#msg {
+::placeholder {
+    color: #fff;
     margin-left: 43px;
+    font-family: "GT Pressura Mono", monospace;
 }
 
 ::selection {
     background-color: #fff;
-    color: #000;
+    color: #fff;
 }
 
-input {
-    border-radius: 8px;
+input,
+button {
+    margin-left: 50px;
+    font-size: 107.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    border-style: hidden;
+    font-family: "GT Pressura Mono", monospace;
 }
 
 button {
@@ -69,7 +80,8 @@ button {
     padding-right: 30px;
     border-radius: 8px;
     margin-top: 15px;
-    margin-left: 80px;
+    margin-left: 460px;
+    font-size: 105%;
     font-weight: bolder;
 }
 
@@ -78,10 +90,25 @@ button {
     top: 890px;
     right: 1515px;
     padding: 6px;
-    color: #000;
+    color: #fff;
     opacity: 0.2;
     font-size: 14px;
     font-weight: bold;
     border-radius: 5px;
     white-space: nowrap;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+p {
+    color: #fff
 }

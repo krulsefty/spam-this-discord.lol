@@ -1,79 +1,116 @@
-async function sendWebhook() {
-    var link = document.getElementById("linkInput").value;
-    let username 
-    var avatar = document.getElementById("avatarInput").value;
-    var msg = document.getElementById("msgInput").value;
-
-    if (!document.getElementById("usernameInput").value) {
-        username = "Webhook"
-    } else {
-        username = document.getElementById("usernameInput").value
-    }
-  
-    var request = new XMLHttpRequest();
-    request.open("POST", link);
-  
-    request.setRequestHeader('Content-type', 'application/json');
-  
-    var params = {
-      username: username,
-      avatar_url: avatar,
-      content: msg
-    };
-  
-    var h3Element = document.querySelector("h3");
-  
-    if (!link || !msg) {
-      return h3Element.innerHTML = "status: <span class='error'>error</span>";
-    }
-  
-    if (
-      link.includes("https://discord.com/api/webhooks/") ||
-      link.includes("https://canary.discord.com/api/webhooks/")
-    ) {
-    } else {
-      return h3Element.innerHTML = "status: <span class='error'>error</span>";
-    }
-  
-    h3Element.innerHTML = "status: <span class='done'>done</span>";
-  
-    request.send(JSON.stringify(params));
+particlesJS("particles-js", {
+  particles: {
+      number: {
+          value: 80,
+          density: {
+              enable: !0,
+              value_area: 210
+          }
+      },
+      color: {
+          value: "#ffffff"
+      },
+      shape: {
+          type: "star",
+          stroke: {
+              width: 0,
+              color: "#000000"
+          },
+          polygon: {
+              nb_sides: 5
+          },
+          image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100
+          }
+      },
+      opacity: {
+          value: .5,
+          random: !1,
+          anim: {
+              enable: !1,
+              speed: 1,
+              opacity_min: .1,
+              sync: !1
+          }
+      },
+      size: {
+          value: 2,
+          random: !0,
+          anim: {
+              enable: !1,
+              speed: 40,
+              size_min: .1,
+              sync: !1
+          }
+      },
+      line_linked: {
+          enable: !1,
+          distance: 150,
+          color: "#ffffff",
+          opacity: .4,
+          width: 1
+      },
+      move: {
+          enable: !0,
+          speed: 1.5,
+          direction: "top",
+          random: 1,
+          straight: 1,
+          out_mode: "out",
+          attract: {
+              enable: !1,
+              rotateX: 600,
+              rotateY: 1200
+          }
+      }
+  },
+  interactivity: {
+      detect_on: "canvas",
+      events: {
+          onhover: {
+              enable: !1,
+              mode: "repulse"
+          },
+          onclick: {
+              enable: !1,
+              mode: "push"
+          },
+          resize: !1
+      },
+      modes: {
+          grab: {
+              distance: 400,
+              line_linked: {
+                  opacity: 1
+              }
+          },
+          bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3
+          },
+          repulse: {
+              distance: 200
+          },
+          push: {
+              particles_nb: 4
+          },
+          remove: {
+              particles_nb: 2
+          }
+      }
+  },
+  retina_detect: !0,
+  config_demo: {
+      hide_card: !1,
+      background_color: "#b61924",
+      background_image: "",
+      background_position: "50% 50%",
+      background_repeat: "no-repeat",
+      background_size: "cover"
   }
-  
-  function sendWebhookLoop() {
-    var numMessages = 35;
-    var delayRange = 750;
-  
-    for (let i = 0; i < numMessages; i++) {
-      setTimeout(sendWebhook, i * delayRange + Math.random() * delayRange * 2);
-    }
-  }
-  
-  document.getElementById("btn").addEventListener("click", sendWebhookLoop);
-  
-
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault()
-})
-
-document.onkeydown = function (e) {
-    if (event.keyCode == 123) {
-        return false
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-        return false
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
-        return false
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-        return false
-    }
-
-    if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-        return false
-    }
-}
+});

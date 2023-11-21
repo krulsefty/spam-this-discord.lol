@@ -8,25 +8,29 @@
     <link rel="icon" type="image/x-icon"
         href="https://cdn.discordapp.com/attachments/966592239008641054/985796048175894538/9652080.gif">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/app.js" defer></script>
+    <script src="js/webhooks.js" defer></script>
 </head>
 
 <body>
 
     <main>
         <h1>webhook spammer</h1>
-        <h2>provide all info needed below</h2>
         <h3>status: pending</h3>
-        <p id="link">webhook link:<br><input id="linkInput"></p>
-        <p id="username">bot's username:<br><input id="usernameInput"></p>
-        <p id="avatar">bot's avatar url:<br><input id="avatarInput"></p>
-        <p id="msg">message:<br><input id="msgInput"></p>
+        <input id="linkInput" placeholder="webhook link*">
+        <input id="usernameInput" placeholder="bot's username">
+        <input id="avatarInput" placeholder="bot's avatar url">
+        <input id="msgInput" placeholder="message">
+        <br>
         <button id="btn">send</button>
     </main>
 
-    <div class="note">
-        <p>wojtek.mafia | &copy; 2023 sefty.eu all rights reserved</p>
+    <div class="overlay">
+        <div class="overlay_part" id="particles-js"></div>
+
     </div>
+
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 
