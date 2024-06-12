@@ -3,7 +3,6 @@ async function sendWebhook() {
     let username 
     let avatar
     let msg
-    let amount
 
     if (!document.getElementById("usernameInput").value) {
         username = "Spidey Bot"
@@ -23,12 +22,6 @@ async function sendWebhook() {
         msg = document.getElementById("msgInput").value
     }
 
-    if (!document.getElementById("amountInput").value) {
-        amount = 75
-    } else {
-        amount = document.getElementById("amountInput").value
-    }
-  
     const message = {
         username: username,
         avatar_url: avatar,
@@ -68,6 +61,14 @@ async function sendWebhook() {
   }
   
   function sendWebhookLoop() {
+    let amount
+
+    if (!document.getElementById("amountInput").value) {
+        amount = 75
+    } else {
+        amount = document.getElementById("amountInput").value
+    }
+
     var numMessages = amount
     var delayRange = 750;
   
