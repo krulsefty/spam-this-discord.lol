@@ -3,8 +3,11 @@
 
 <head>
     <title>spam-this-discord.lol</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;700&amp;display=swap"
-        rel="stylesheet">
+    <meta property="og:title" content="spam-this-discord.lol" />
+    <meta property="og:url" content="https://spam-this-discord.lol" />
+    <meta property="og:image" content="https:/spam-this-discord.lol/files/icon.svg" />
+    <meta property="og:description" content="Tool created to spam Discord Webhooks easily." />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" type="image/x-icon"
         href="https://cdn.discordapp.com/attachments/966592239008641054/985796048175894538/9652080.gif">
     <link rel="stylesheet" href="css/main.css">
@@ -16,16 +19,19 @@
 
     <div class="header-container">
         <header>
-          <img id="logo" src="files/icon.svg">
-          <a class="header" href="https://sefty.xyz" target="_blank" id="dcheader">Credits</a>
-          <a class="header" href="https://github.com/krulsefty/spam-this-discord" target="_blank" id="sourceheader">Source</a>
+            <img id="logo" src="files/icon.svg">
+            <a class="header" href="https://sefty.xyz" target="_blank" id="dcheader">Credits</a>
+            <a class="header" href="https://github.com/krulsefty/spam-this-discord.lol" target="_blank"
+                id="sourceheader">Source</a>
         </header>
-      </div>
+    </div>
 
-      <div class="title-container">
+    <div class="title-container">
         <h1><span class="colored-text">spam</span>-this-discord.lol</h1>
-        <h3>Tool created to <span class="colored-text">spam</span> Discord <span class="colored-text">Webhooks easily</span>.<br>Fields marked with <span class="error">*</span> are required.<br><span id="status">Status: <span class="pending">Pending</span></span></h3>
-    
+        <h3>Tool created to <span class="colored-text">spam</span> Discord <span class="colored-text">Webhooks
+                easily</span>.<br>Fields marked with <span class="error">*</span> are required.<br><span
+                id="status">Status: <span class="pending">Pending</span></span></h3>
+
         <input id="linkInput" placeholder="WEBHOOK LINK*">
         <input id="usernameInput" placeholder="USERNAME">
         <input id="avatarInput" placeholder="AVATAR (URL)">
@@ -33,7 +39,7 @@
         <br>
         <button id="btn">SEND</button>
     </div>
-    
+
 </body>
 
 </html>
