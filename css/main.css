@@ -1,114 +1,217 @@
+/* s */
+/* e */
+/* f */
+/* t */
+/* y */
+
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #000;
-    font-family: "GT Pressura Mono", monospace;
+    font-family: "Rubik";
+    color: #fff;
+    background: rgb(11, 11, 11);
+    background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(13, 13, 14) 56%, rgb(18, 18, 19) 100%);
+    min-height: 205vh;
     overflow: hidden;
+    overflow-x: hidden;
+}
+
+.title-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 120px;
+    padding-top: 60px;
+    gap: 0px;
 }
 
-main {
-    opacity: 0;
-    margin-top: 180px;
-    animation: slideIn 1s forwards;
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.desc {
+    font-size: 100%;
+    position: absolute;
+    bottom: 61%;
+    text-align: center;
 }
 
 h1 {
-    color: #fff;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.5);
+    font-size: 325%;
+    margin-bottom: 5px;
 }
 
-h2 {
-    font-size: 92%;
-    margin-left: 15px;
-}
 
 h3 {
-    color: #fff;
-    margin-left: -20px;
+    padding-bottom: 15px;
     text-align: center;
 }
 
-h3 .done {
-    color: #2BC03E;
+#location-logo {
+    opacity: 0.5;
+    padding-right: 5px;
 }
 
-h3 .error {
-    color: #CA2C2C;
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-::placeholder {
-    color: #fff;
-    margin-left: 43px;
-    font-family: "GT Pressura Mono", monospace;
-}
-
-::selection {
-    background-color: #fff;
-    color: #fff;
-}
-
-input,
-button {
-    margin-left: 50px;
-    font-size: 107.5%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    color: #fff;
-    background-color: #000;
-    border-radius: 5px;
-    border-style: hidden;
-    font-family: "GT Pressura Mono", monospace;
-}
-
-button {
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 8px;
-    margin-top: 15px;
-    margin-left: 460px;
-    font-size: 105%;
+.colored-text {
+    background: -webkit-linear-gradient(#838383, #797878);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bolder;
 }
 
-.note {
-    position: fixed;
-    top: 890px;
-    right: 1515px;
-    padding: 6px;
-    color: #fff;
-    opacity: 0.2;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-    white-space: nowrap;
+::-webkit-scrollbar {
+    width: 0px;
 }
 
-.overlay {
-    position: absolute;
-    left: 0;
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
     top: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    transition: 0.4s;
+    height: 52px;
+    background-color: rgba(5, 5, 5, 0.7);
+    backdrop-filter: blur(5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-left: 0px;
+    border-top: 0px;
+    border-width: 1px;
+    z-index: 1;
 }
 
-p {
-    color: #fff
+header {
+    height: 100%;
+}
+
+#dcheader,
+#sourceheader {
+    position: fixed;
+    top: 35%;
+    left: 70%;
+    font-size: 90%;
+    opacity: 0.75;
+}
+
+#sourceheader {
+    left: 76%;
+}
+
+#logo {
+    position: fixed;
+    top: 20%;
+    left: 16%;
+    width: 33px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+input, button {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    margin-top: 7.5px;
+    background-color: rgba(12, 12, 12, 0.7);
+}
+
+#btn {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Rubik;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Rubik;
+    text-align: center;
+}
+
+.pending {
+    background: -webkit-linear-gradient(#54c7d6, #1982b3);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+.error {
+    background: -webkit-linear-gradient(#d65454, #b31919);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+.done {
+    background: -webkit-linear-gradient(#5fd654, #19b33a);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 535px) {
+    .member {
+        width: 450px;
+    }
+
+    .activity {
+        width: 450px;
+    }
+
+    .add-on-discord {
+        left: 290px;
+        width: 176px;
+    }
+
+    .display-name {
+        left: 130px;
+    }
+
+    .username {
+        left: 130px;
+    }
+
+    .details {
+        left: 130px;
+    }
+
+    .title {
+        left: 130px;
+    }
+
+    .state {
+        left: 130px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #dcheader {
+        left: 67%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #dcheader {
+        left: 66%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #dcheader {
+        left: 63%;
+    }
 }

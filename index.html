@@ -8,30 +8,32 @@
     <link rel="icon" type="image/x-icon"
         href="https://cdn.discordapp.com/attachments/966592239008641054/985796048175894538/9652080.gif">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/webhooks.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="files/icon.svg" />
+    <script src="js/app.js" defer></script>
 </head>
 
 <body>
 
-    <main>
-        <h1>webhook spammer</h1>
-        <h3>status: pending</h3>
-        <input id="linkInput" placeholder="webhook link*">
-        <input id="usernameInput" placeholder="bot's username">
-        <input id="avatarInput" placeholder="bot's avatar url">
-        <input id="msgInput" placeholder="message">
+    <div class="header-container">
+        <header>
+          <img id="logo" src="files/icon.svg">
+          <a class="header" href="https://sefty.xyz" target="_blank" id="dcheader">Credits</a>
+          <a class="header" href="https://github.com/krulsefty/sefty.xyz" target="_blank" id="sourceheader">Source</a>
+        </header>
+      </div>
+
+      <div class="title-container">
+        <h1><span class="colored-text">spam</span>-this-discord.lol</h1>
+        <h3>Tool created to <span class="colored-text">spam</span> Discord <span class="colored-text">Webhooks easily</span>.<br>Fields marked with <span class="error">*</span> are required.<br><span id="status">Status: <span class="pending">Pending</span></span></h3>
+    
+        <input id="linkInput" placeholder="WEBHOOK LINK*">
+        <input id="usernameInput" placeholder="USERNAME">
+        <input id="avatarInput" placeholder="AVATAR (URL)">
+        <input id="msgInput" placeholder="MESSAGE">
         <br>
-        <button id="btn">send</button>
-    </main>
-
-    <div class="overlay">
-        <div class="overlay_part" id="particles-js"></div>
-
+        <button id="btn">SEND</button>
     </div>
-
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>
-
+    
 </body>
 
 </html>
